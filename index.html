@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discohook Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="toggle-theme">
+        <input type="checkbox" id="themeToggle">
+        <label for="themeToggle" class="toggle-label"></label>
+    </div>
+    <h1>Discohook Clone</h1>
+    <form id="messageForm">
+        <label for="webhookURL">Webhook URL:</label>
+        <input type="text" id="webhookURL" name="webhookURL" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <label for="content">Message Content:</label>
+        <textarea id="content" name="content" required></textarea>
+        <label for="embedTitle">Embed Title:</label>
+        <input type="text" id="embedTitle" name="embedTitle">
+        <label for="embedDescription">Embed Description:</label>
+        <textarea id="embedDescription" name="embedDescription"></textarea>
+        <label for="embedColor">Embed Color:</label>
+        <input type="color" id="embedColor" name="embedColor" value="#7289da">
+        <label for="fields">Fields:</label>
+        <div id="fields">
+            <div class="field">
+                <input type="text" class="fieldTitle" placeholder="Field Title">
+                <input type="text" class="fieldValue" placeholder="Field Value">
+            </div>
+        </div>
+        <button type="button" id="addField">Add Field</button>
+        <label for="footer">Footer:</label>
+        <input type="text" id="footer" name="footer">
+        <button type="submit">Send</button>
+    </form>
+    <div id="preview-container">
+        <h2>Embed Preview</h2>
+        <div id="preview"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
